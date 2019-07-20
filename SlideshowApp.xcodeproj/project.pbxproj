@@ -12,6 +12,10 @@
 		E30F774322E30E09008A0430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30F774122E30E09008A0430 /* Main.storyboard */; };
 		E30F774522E30E0C008A0430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E30F774422E30E0C008A0430 /* Assets.xcassets */; };
 		E30F774822E30E0C008A0430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30F774622E30E0C008A0430 /* LaunchScreen.storyboard */; };
+		E30F775322E312E9008A0430 /* DWYL_Navy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E30F774F22E312E9008A0430 /* DWYL_Navy.jpg */; };
+		E30F775422E312E9008A0430 /* DWYL_neon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E30F775022E312E9008A0430 /* DWYL_neon.jpg */; };
+		E30F775522E312E9008A0430 /* DWYL_Glay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E30F775122E312E9008A0430 /* DWYL_Glay.jpg */; };
+		E30F775822E327DB008A0430 /* ExpandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F775722E327DB008A0430 /* ExpandViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E30F774422E30E0C008A0430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E30F774722E30E0C008A0430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E30F774922E30E0C008A0430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E30F774F22E312E9008A0430 /* DWYL_Navy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DWYL_Navy.jpg; sourceTree = "<group>"; };
+		E30F775022E312E9008A0430 /* DWYL_neon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DWYL_neon.jpg; sourceTree = "<group>"; };
+		E30F775122E312E9008A0430 /* DWYL_Glay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DWYL_Glay.jpg; sourceTree = "<group>"; };
+		E30F775722E327DB008A0430 /* ExpandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				E30F773D22E30E09008A0430 /* AppDelegate.swift */,
 				E30F773F22E30E09008A0430 /* ViewController.swift */,
 				E30F774122E30E09008A0430 /* Main.storyboard */,
+				E30F775722E327DB008A0430 /* ExpandViewController.swift */,
 				E30F774422E30E0C008A0430 /* Assets.xcassets */,
 				E30F774622E30E0C008A0430 /* LaunchScreen.storyboard */,
 				E30F774922E30E0C008A0430 /* Info.plist */,
+				E30F775122E312E9008A0430 /* DWYL_Glay.jpg */,
+				E30F774F22E312E9008A0430 /* DWYL_Navy.jpg */,
+				E30F775022E312E9008A0430 /* DWYL_neon.jpg */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -123,7 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30F774822E30E0C008A0430 /* LaunchScreen.storyboard in Resources */,
+				E30F775322E312E9008A0430 /* DWYL_Navy.jpg in Resources */,
+				E30F775522E312E9008A0430 /* DWYL_Glay.jpg in Resources */,
 				E30F774522E30E0C008A0430 /* Assets.xcassets in Resources */,
+				E30F775422E312E9008A0430 /* DWYL_neon.jpg in Resources */,
 				E30F774322E30E09008A0430 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +152,7 @@
 			files = (
 				E30F774022E30E09008A0430 /* ViewController.swift in Sources */,
 				E30F773E22E30E09008A0430 /* AppDelegate.swift in Sources */,
+				E30F775822E327DB008A0430 /* ExpandViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
