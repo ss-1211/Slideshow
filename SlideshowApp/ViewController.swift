@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //ボタンの有効/無効の配列
+    @IBOutlet var exclusiveButton: [UIButton]!
+    
     //表示する画像の配列
     let imageArrayString = ["DWYL_Glay.jpg", "DWYL_Navy.jpg", "DWYL_neon.jpg"]
     //表示番号の初期値
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayImage: UIImageView!
     
     //進むボタンをお
-    @IBAction func nextButton(_ sender: Any) {
+    @IBAction func nextButton(_ sender: UIButton) {
         //最初の画像から進む
         if imageNum == 0 {
             imageNum += 1
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func backButton(_ sender: Any) {
+    @IBAction func backButton(_ sender: UIButton) {
         //最後の画像からBackする
         if imageNum == 2 {
             imageNum -= 1
@@ -61,16 +64,26 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func startStopButton(_ sender: Any) {
+    @IBAction func startStopButton(_ sender: UIButton) {
+        sender.setTitle("再生", for: .normal)
         //再生ボタンの挙動
         if tappedCount == 0 {
             self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             tappedCount += 1
+            //他のボタンを無効化
+            for button in exclusiveButton {
+                button.isEnabled = false
+            }
+            sender.setTitle("停止", for: .normal)
         //停止ボタンの挙動
         } else {
             self.timer.invalidate()
             tappedCount = 0
             self.timer_sec = 0
+            //他のボタンを再有効
+            for button in exclusiveButton {
+                button.isEnabled = true
+            }
         }
     }
     
@@ -80,7 +93,6 @@ class ViewController: UIViewController {
         
         //タップを許可する
         displayImage.isUserInteractionEnabled = true
-        
         //初期表示する画像
         let initImage = UIImage(named: imageArrayString[imageNum])
         displayImage.image = initImage
@@ -108,11 +120,16 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let expandViewController: ExpandViewController = segue.destination as! ExpandViewController
         if displayImage.image == displayImage.image {
+            timer.invalidate()
             expandViewController.image = displayImage.image!
         }
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        for button in exclusiveButton {
+            button.isEnabled = true
+        }
+        
     }
 }
 

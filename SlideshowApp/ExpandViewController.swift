@@ -16,7 +16,7 @@ class ExpandViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bigImage.image = image
-        bigImage.transform = CGAffineTransform(scaleX: 2, y: 2);
+        bigImage.transform = CGAffineTransform(scaleX: 1.5, y: 1.5);
         // Do any additional setup after loading the view.
     }
     
