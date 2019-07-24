@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     //ボタンの有効/無効の配列
     @IBOutlet var exclusiveButton: [UIButton]!
+    @IBOutlet var slideLabelText: [UIButton]!
     
     //表示する画像の配列
     let imageArrayString = ["DWYL_Glay.jpg", "DWYL_Navy.jpg", "DWYL_neon.jpg"]
@@ -68,7 +69,7 @@ class ViewController: UIViewController {
         sender.setTitle("再生", for: .normal)
         //再生ボタンの挙動
         if tappedCount == 0 {
-            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             tappedCount += 1
             //他のボタンを無効化
             for button in exclusiveButton {
@@ -120,7 +121,11 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let expandViewController: ExpandViewController = segue.destination as! ExpandViewController
         if displayImage.image == displayImage.image {
-            timer.invalidate()
+            if timer == nil {
+                expandViewController.image = displayImage.image!
+            }else {
+                timer.invalidate()
+            }
             expandViewController.image = displayImage.image!
         }
     }
@@ -129,6 +134,10 @@ class ViewController: UIViewController {
         for button in exclusiveButton {
             button.isEnabled = true
         }
+        for slideText in slideLabelText {
+            slideText.setTitle("再生", for: .normal)
+        }
+        tappedCount = 0
         
     }
 }

@@ -68,6 +68,7 @@
                         <outlet property="displayImage" destination="o1e-FT-5FO" id="RSU-YR-fbf"/>
                         <outletCollection property="exclusiveButton" destination="Muh-3t-MVg" collectionClass="NSMutableArray" id="nF5-5c-jJf"/>
                         <outletCollection property="exclusiveButton" destination="Ak2-Ou-a77" collectionClass="NSMutableArray" id="L9Y-By-M2B"/>
+                        <outletCollection property="slideLabelText" destination="Wac-73-CyM" collectionClass="NSMutableArray" id="yHU-Yg-8gs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
